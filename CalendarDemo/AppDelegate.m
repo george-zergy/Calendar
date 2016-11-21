@@ -22,7 +22,7 @@
     //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor colorWithRed:(247/255.0) green:(247/255.0) blue:(247/255.0) alpha:1];
-	self.window.tintColor = [UIColor redColor];
+	//self.window.tintColor = [UIColor redColor];
     //[self.window makeKeyAndVisible];
 	
 #if MEMORY_WARNING_SIMULATE

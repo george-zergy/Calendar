@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="DbJ-31-h6o">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="DbJ-31-h6o">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="kxW-zC-am1">
             <objects>
-                <viewController id="DbJ-31-h6o" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DbJ-31-h6o" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ahH-uo-DwM"/>
                         <viewControllerLayoutGuide type="bottom" id="Yq7-Y3-QaW"/>
@@ -17,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="March 2015" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsh-1q-Owa">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="March 2015" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsh-1q-Owa">
                                 <rect key="frame" x="20" y="26" width="122" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-TQ-m4h">
                                 <rect key="frame" x="0.0" y="69" width="768" height="914"/>
-                                <color key="backgroundColor" white="0.94793567518248179" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.94793570041656494" green="0.94793570041656494" blue="0.94793570041656494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OKo-QW-B69">
                                 <rect key="frame" x="218" y="25" width="333" height="29"/>
@@ -32,10 +36,10 @@
                                     <constraint firstAttribute="width" constant="333" id="oWq-Yh-o0K" userLabel="Width - (227) - Plain Segmented Control - Jour, Semaine, Mois"/>
                                 </constraints>
                                 <segments>
+                                    <segment title="Day"/>
                                     <segment title="Week"/>
                                     <segment title="Month"/>
                                     <segment title="Year"/>
-                                    <segment title="Day"/>
                                 </segments>
                                 <connections>
                                     <action selector="switchControllers:" destination="DbJ-31-h6o" eventType="valueChanged" id="aKi-Fk-1HC"/>
@@ -70,7 +74,7 @@
                                     <constraint firstAttribute="width" constant="44" id="wYj-vY-gDl"/>
                                 </constraints>
                                 <state key="normal" title="&lt;&lt;">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="previousPage:" destination="DbJ-31-h6o" eventType="touchUpInside" id="jGD-NL-6h3"/>
@@ -83,14 +87,14 @@
                                     <constraint firstAttribute="width" constant="44" id="aVV-LP-3pn"/>
                                 </constraints>
                                 <state key="normal" title="&gt;&gt;">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="nextPage:" destination="DbJ-31-h6o" eventType="touchUpInside" id="xFp-Ni-Q7G"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Dsh-1q-Owa" firstAttribute="centerY" secondItem="OKo-QW-B69" secondAttribute="centerY" id="0zs-m1-2SO"/>
                             <constraint firstAttribute="centerX" secondItem="OKo-QW-B69" secondAttribute="centerX" id="2jd-Ug-pgr"/>
@@ -152,4 +156,9 @@
             <point key="canvasLocation" x="-140" y="-880"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

@@ -194,7 +194,7 @@ typedef enum : NSUInteger
     [self.calendarViewController willMoveToParentViewController:nil];
     [self addChildViewController:newController];
     
-    [self transitionFromViewController:self.calendarViewController toViewController:newController duration:.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^
+    [self transitionFromViewController:self.calendarViewController toViewController:newController duration:.5 options:UIViewAnimationOptionCurveEaseIn animations:^
      {
          newController.view.frame = self.containerView.bounds;
          newController.view.hidden = YES;
