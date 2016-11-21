@@ -17,10 +17,10 @@
 
 typedef enum : NSUInteger
 {
-    CalendarViewWeekType  = 0,
-    CalendarViewMonthType = 1,
-    CalendarViewYearType = 2,
-    CalendarViewDayType
+    CalendarViewDayType = 0,
+    CalendarViewWeekType = 1,
+    CalendarViewMonthType = 2,
+    CalendarViewYearType
 } CalendarViewType;
 
 
@@ -75,7 +75,7 @@ typedef enum : NSUInteger
         self.navigationItem.leftBarButtonItem.customView = self.currentDateLabel;
     }
 	
-	CalendarViewController *controller = [self controllerForViewType:CalendarViewWeekType];
+	CalendarViewController *controller = [self controllerForViewType:CalendarViewDayType];
 	[self addChildViewController:controller];
 	[self.containerView addSubview:controller.view];
 	controller.view.frame = self.containerView.bounds;
