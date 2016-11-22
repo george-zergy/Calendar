@@ -54,43 +54,19 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rhy-3n-Oyv"/>
-                                    <barButtonItem title="Calendars" id="Nvx-NY-R5j">
-                                        <connections>
-                                            <action selector="showCalendars:" destination="DbJ-31-h6o" id="A39-kk-4ey"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Bep-9A-jxy"/>
-                                    <barButtonItem title="⚙" id="Att-HQ-oMJ">
-                                        <connections>
-                                            <action selector="showSettings:" destination="DbJ-31-h6o" id="4rf-I8-boI"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8f-3G-XnQ">
-                                <rect key="frame" x="643" y="19" width="44" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="BK1-4p-EIu"/>
-                                    <constraint firstAttribute="width" constant="44" id="wYj-vY-gDl"/>
-                                </constraints>
-                                <state key="normal" title="&lt;&lt;">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="previousPage:" destination="DbJ-31-h6o" eventType="touchUpInside" id="jGD-NL-6h3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LH-Ns-UHv">
                                 <rect key="frame" x="702" y="19" width="44" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="D4K-fl-LXI"/>
                                     <constraint firstAttribute="width" constant="44" id="aVV-LP-3pn"/>
                                 </constraints>
-                                <state key="normal" title="&gt;&gt;">
+                                <state key="normal" title="C">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextPage:" destination="DbJ-31-h6o" eventType="touchUpInside" id="xFp-Ni-Q7G"/>
+                                    <action selector="showCalendars:" destination="DbJ-31-h6o" eventType="touchUpInside" id="rUq-CQ-KA8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,11 +77,9 @@
                             <constraint firstItem="Dsh-1q-Owa" firstAttribute="centerY" secondItem="5LH-Ns-UHv" secondAttribute="centerY" id="5mn-r6-dE9"/>
                             <constraint firstAttribute="trailing" secondItem="5LH-Ns-UHv" secondAttribute="trailing" constant="22" id="6bi-9E-aSf"/>
                             <constraint firstItem="4WS-PM-ty7" firstAttribute="leading" secondItem="IPr-fj-gu6" secondAttribute="leading" id="9Dv-IV-vXc"/>
-                            <constraint firstItem="Dsh-1q-Owa" firstAttribute="centerY" secondItem="Y8f-3G-XnQ" secondAttribute="centerY" id="9U3-KQ-tLD"/>
                             <constraint firstAttribute="trailing" secondItem="Ham-TQ-m4h" secondAttribute="trailing" id="AVi-86-99V"/>
                             <constraint firstItem="OKo-QW-B69" firstAttribute="top" secondItem="ahH-uo-DwM" secondAttribute="bottom" constant="5" id="Akm-FX-06u"/>
                             <constraint firstAttribute="trailing" secondItem="Ham-TQ-m4h" secondAttribute="trailing" id="FMp-N5-V2N"/>
-                            <constraint firstItem="5LH-Ns-UHv" firstAttribute="leading" secondItem="Y8f-3G-XnQ" secondAttribute="trailing" constant="15" id="HfV-oT-fV9"/>
                             <constraint firstItem="Ham-TQ-m4h" firstAttribute="leading" secondItem="IPr-fj-gu6" secondAttribute="leading" id="OOK-r0-imL"/>
                             <constraint firstItem="Dsh-1q-Owa" firstAttribute="leading" secondItem="IPr-fj-gu6" secondAttribute="leading" constant="20" id="cGI-MB-tcO"/>
                             <constraint firstItem="Ham-TQ-m4h" firstAttribute="leading" secondItem="IPr-fj-gu6" secondAttribute="leading" id="fzJ-nG-ub9"/>
@@ -123,14 +97,7 @@
                     <connections>
                         <outlet property="containerView" destination="Ham-TQ-m4h" id="fPz-Zz-13M"/>
                         <outlet property="currentDateLabel" destination="Dsh-1q-Owa" id="acC-0h-0TN"/>
-                        <outlet property="settingsButtonItem" destination="Att-HQ-oMJ" id="nqd-g7-r8T"/>
                         <outlet property="viewChooser" destination="OKo-QW-B69" id="b7B-iE-qHJ"/>
-                        <segue destination="Ddq-CE-53i" kind="popover" identifier="dayPlannerSettingsSegue" popoverAnchorBarButtonItem="Att-HQ-oMJ" id="Thn-mh-2db">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                        <segue destination="TUG-Yd-0AJ" kind="popover" identifier="monthPlannerSettingsSegue" popoverAnchorBarButtonItem="Att-HQ-oMJ" id="gvu-GZ-28K">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCc-d4-pwg" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +26,7 @@
                                 <color key="backgroundColor" red="0.94793570041656494" green="0.94793570041656494" blue="0.94793570041656494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </containerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUn-JT-Rec">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Today" id="L51-DF-0tA">
                                         <connections>
@@ -35,17 +34,6 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uT8-KB-1be"/>
-                                    <barButtonItem title="Calendars" id="jb4-ur-rN3">
-                                        <connections>
-                                            <action selector="showCalendars:" destination="2hR-lJ-uEz" id="xpN-NQ-fp5"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JnW-OK-2tg"/>
-                                    <barButtonItem title="⚙" id="Kp2-Jx-AfL">
-                                        <connections>
-                                            <action selector="showSettings:" destination="2hR-lJ-uEz" id="6Ba-sr-z8g"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -65,7 +53,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="2016" id="SQ8-0g-wKM"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="6hS-eO-sTa">
-                            <rect key="frame" x="74" y="7" width="215" height="30"/>
+                            <rect key="frame" x="80" y="7" width="215" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Day"/>
@@ -77,30 +65,16 @@
                                 <action selector="switchControllers:" destination="2hR-lJ-uEz" eventType="valueChanged" id="4Tb-tc-Ttf"/>
                             </connections>
                         </segmentedControl>
-                        <rightBarButtonItems>
-                            <barButtonItem title="&gt;&gt;" id="PXg-Kw-8sZ">
-                                <connections>
-                                    <action selector="nextPage:" destination="2hR-lJ-uEz" id="6X8-LZ-mEo"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="&lt;&lt;" id="wYF-fk-wuf">
-                                <connections>
-                                    <action selector="previousPage:" destination="2hR-lJ-uEz" id="Pw9-fc-kPo"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="C" id="PXg-Kw-8sZ">
+                            <connections>
+                                <action selector="showCalendars:" destination="2hR-lJ-uEz" id="QuB-lj-WEr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="UIQ-Ir-tpF" id="fwo-It-Omh"/>
                         <outlet property="currentDateLabel" destination="7CX-DX-AlJ" id="bgE-8b-eGn"/>
-                        <outlet property="settingsButtonItem" destination="Kp2-Jx-AfL" id="sk1-9I-sgq"/>
                         <outlet property="viewChooser" destination="6hS-eO-sTa" id="Nr1-hD-wlG"/>
-                        <segue destination="gDc-sm-yy2" kind="popoverPresentation" identifier="dayPlannerSettingsSegue" popoverAnchorBarButtonItem="Kp2-Jx-AfL" id="Ak6-xz-EdB">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                        <segue destination="Tic-j0-v9T" kind="popoverPresentation" identifier="monthPlannerSettingsSegue" popoverAnchorBarButtonItem="Kp2-Jx-AfL" id="1sR-dV-I7q">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRx-MN-2Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -112,7 +86,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="495" y="-1560"/>
+            <point key="canvasLocation" x="493.60000000000002" y="-1560.2698650674663"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WxE-et-L5N">
