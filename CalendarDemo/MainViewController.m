@@ -72,7 +72,7 @@ typedef enum : NSUInteger
     }
     else{
         //NSLog(@"---------------- iPhone ------------------");
-        self.navigationItem.leftBarButtonItem.customView = self.currentDateLabel;
+       // self.navigationItem.leftBarButtonItem.customView = self.currentDateLabel;
     }
 	
 	CalendarViewController *controller = [self controllerForViewType:CalendarViewDayType];
@@ -118,9 +118,7 @@ typedef enum : NSUInteger
     }
     
     BOOL doneButton = (self.traitCollection.verticalSizeClass != UIUserInterfaceSizeClassRegular || self.traitCollection.horizontalSizeClass != UIUserInterfaceSizeClassRegular);
-    if (doneButton) {
-         nc.topViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissSettings:)];
-    }
+
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -212,16 +210,10 @@ typedef enum : NSUInteger
 
 -(IBAction)switchControllers:(UISegmentedControl*)sender
 {
-    self.settingsButtonItem.enabled = NO;
-    
     NSDate *date = [self.calendarViewController centerDate];
     CalendarViewController *controller = [self controllerForViewType:sender.selectedSegmentIndex];
     [self moveToNewController:controller atDate:date];
     
-    
-    if ([controller isKindOfClass:WeekViewController.class] || [controller isKindOfClass:MonthViewController.class]) {
-        self.settingsButtonItem.enabled = YES;
-    }
 }
 
 - (IBAction)showToday:(id)sender
@@ -260,21 +252,6 @@ typedef enum : NSUInteger
     }
 }
 
-- (IBAction)showSettings:(id)sender
-{
-    if ([self.calendarViewController isKindOfClass:WeekViewController.class]) {
-        [self performSegueWithIdentifier:@"dayPlannerSettingsSegue" sender:nil];
-    }
-    else if ([self.calendarViewController isKindOfClass:MonthViewController.class]) {
-        [self performSegueWithIdentifier:@"monthPlannerSettingsSegue" sender:nil];
-    }
-}
-
-- (void)dismissSettings:(UIBarButtonItem*)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void)calendarChooserStartEdit
 {
     self.calendarChooser.editing = YES;
@@ -307,7 +284,7 @@ typedef enum : NSUInteger
     
     NSString *str = [self.dateFormatter stringFromDate:date];
     self.currentDateLabel.text = str;
-    [self.currentDateLabel sizeToFit];
+    //[self.currentDateLabel sizeToFit];
 }
 
 - (void)calendarViewController:(CalendarViewController*)controller didSelectEvent:(EKEvent*)event

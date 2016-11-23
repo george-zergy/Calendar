@@ -26,14 +26,19 @@
     self.dayPlannerView.backgroundView = [UIView new];
     self.dayPlannerView.backgroundView.backgroundColor = [UIColor whiteColor];
     
+    
+}
+
+- (void)viewDidLayoutSubviews {
+    
     if (isiPad) {
         //NSLog(@"---------------- iPAD ------------------");
         self.dayPlannerView.dateFormat = @"eee\nd MMM";
-        self.dayPlannerView.dayHeaderHeight = 50;
+        self.dayPlannerView.dayHeaderHeight = 60;
     }
     else{
         //NSLog(@"---------------- iPhone ------------------");
-        self.dayPlannerView.dateFormat = @"eee\nd \nMMM";
+        self.dayPlannerView.dateFormat = @"eee\nd MMM";
         self.dayPlannerView.dayHeaderHeight = 60;
     }
 }

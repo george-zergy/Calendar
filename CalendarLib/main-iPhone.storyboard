@@ -21,39 +21,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIQ-Ir-tpF">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIQ-Ir-tpF">
+                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                 <color key="backgroundColor" red="0.94793570041656494" green="0.94793570041656494" blue="0.94793570041656494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </containerView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUn-JT-Rec">
-                                <rect key="frame" x="0.0" y="556" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Today" id="L51-DF-0tA">
-                                        <connections>
-                                            <action selector="showToday:" destination="2hR-lJ-uEz" id="sAG-51-kDg"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uT8-KB-1be"/>
-                                </items>
-                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4H-s1-4Pu">
+                                <rect key="frame" x="0.0" y="64" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="e23-vb-bbb"/>
+                                    <constraint firstAttribute="width" constant="60" id="rM0-Wh-Q0j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                <state key="normal" title="Today"/>
+                                <connections>
+                                    <action selector="showToday:" destination="2hR-lJ-uEz" eventType="touchUpInside" id="q0E-gK-Q18"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4o-Z4-bbt">
+                                <rect key="frame" x="60" y="64" width="255" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqz-iN-x2m">
+                                <rect key="frame" x="0.0" y="104" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="jf6-sb-rFI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94782161712646484" green="0.94782161712646484" blue="0.94782161712646484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UIQ-Ir-tpF" firstAttribute="bottom" secondItem="xUn-JT-Rec" secondAttribute="top" id="AaU-LW-FC8"/>
-                            <constraint firstAttribute="bottom" secondItem="xUn-JT-Rec" secondAttribute="bottom" id="H6W-RE-F2d"/>
+                            <constraint firstItem="UIQ-Ir-tpF" firstAttribute="top" secondItem="U4o-Z4-bbt" secondAttribute="bottom" id="8el-1n-Hwg"/>
+                            <constraint firstItem="SzC-8B-Tff" firstAttribute="top" secondItem="UIQ-Ir-tpF" secondAttribute="bottom" id="DKI-FF-Euw"/>
+                            <constraint firstItem="I4H-s1-4Pu" firstAttribute="leading" secondItem="ElL-wU-zR9" secondAttribute="leading" id="HJd-5R-WFF"/>
+                            <constraint firstItem="U4o-Z4-bbt" firstAttribute="top" secondItem="LvG-Cf-elk" secondAttribute="bottom" id="HNZ-Vc-hh5"/>
                             <constraint firstAttribute="trailing" secondItem="UIQ-Ir-tpF" secondAttribute="trailing" id="Iso-QD-m7n"/>
                             <constraint firstItem="UIQ-Ir-tpF" firstAttribute="leading" secondItem="ElL-wU-zR9" secondAttribute="leading" id="Ji8-qn-sOi"/>
-                            <constraint firstItem="xUn-JT-Rec" firstAttribute="leading" secondItem="ElL-wU-zR9" secondAttribute="leading" id="NKX-wK-rEv"/>
-                            <constraint firstItem="UIQ-Ir-tpF" firstAttribute="top" secondItem="LvG-Cf-elk" secondAttribute="bottom" id="ReQ-uE-Biy"/>
-                            <constraint firstAttribute="trailing" secondItem="xUn-JT-Rec" secondAttribute="trailing" id="mz8-oa-ws7"/>
+                            <constraint firstItem="UIQ-Ir-tpF" firstAttribute="top" secondItem="LvG-Cf-elk" secondAttribute="bottom" constant="40" id="ReQ-uE-Biy"/>
+                            <constraint firstAttribute="trailing" secondItem="hqz-iN-x2m" secondAttribute="trailing" id="Tj9-EJ-vh9"/>
+                            <constraint firstItem="hqz-iN-x2m" firstAttribute="leading" secondItem="ElL-wU-zR9" secondAttribute="leading" id="Y4g-NK-J3Z"/>
+                            <constraint firstItem="U4o-Z4-bbt" firstAttribute="leading" secondItem="I4H-s1-4Pu" secondAttribute="trailing" id="eJ1-ru-6EN"/>
+                            <constraint firstItem="hqz-iN-x2m" firstAttribute="top" secondItem="U4o-Z4-bbt" secondAttribute="bottom" id="hmU-ad-J6A"/>
+                            <constraint firstItem="I4H-s1-4Pu" firstAttribute="top" secondItem="LvG-Cf-elk" secondAttribute="bottom" id="nau-dA-Lb5"/>
+                            <constraint firstAttribute="trailing" secondItem="U4o-Z4-bbt" secondAttribute="trailing" constant="60" id="s8X-Fl-eP4"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="45O-eq-qLl">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="2016" id="SQ8-0g-wKM"/>
+                        <barButtonItem key="leftBarButtonItem" image="calendar.png" id="SQ8-0g-wKM">
+                            <connections>
+                                <action selector="showCalendars:" destination="2hR-lJ-uEz" id="tFe-qs-0WI"/>
+                            </connections>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="6hS-eO-sTa">
-                            <rect key="frame" x="80" y="7" width="215" height="30"/>
+                            <rect key="frame" x="58" y="7" width="260" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Day"/>
@@ -65,26 +89,15 @@
                                 <action selector="switchControllers:" destination="2hR-lJ-uEz" eventType="valueChanged" id="4Tb-tc-Ttf"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" title="C" id="PXg-Kw-8sZ">
-                            <connections>
-                                <action selector="showCalendars:" destination="2hR-lJ-uEz" id="QuB-lj-WEr"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PXg-Kw-8sZ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="UIQ-Ir-tpF" id="fwo-It-Omh"/>
-                        <outlet property="currentDateLabel" destination="7CX-DX-AlJ" id="bgE-8b-eGn"/>
+                        <outlet property="currentDateLabel" destination="U4o-Z4-bbt" id="g0y-UD-BDu"/>
                         <outlet property="viewChooser" destination="6hS-eO-sTa" id="Nr1-hD-wlG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRx-MN-2Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7CX-DX-AlJ">
-                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </objects>
             <point key="canvasLocation" x="493.60000000000002" y="-1560.2698650674663"/>
         </scene>
@@ -123,4 +136,7 @@
             <point key="canvasLocation" x="667.5" y="-1091"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar.png" width="16" height="16"/>
+    </resources>
 </document>
