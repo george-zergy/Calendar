@@ -71,13 +71,13 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="45O-eq-qLl">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="calendar.png" id="SQ8-0g-wKM">
+                        <barButtonItem key="leftBarButtonItem" image="calendars.png" id="SQ8-0g-wKM">
                             <connections>
                                 <action selector="showCalendars:" destination="2hR-lJ-uEz" id="tFe-qs-0WI"/>
                             </connections>
                         </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="6hS-eO-sTa">
-                            <rect key="frame" x="57.5" y="7" width="260" height="30"/>
+                            <rect key="frame" x="80" y="7" width="215" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Day"/>
@@ -141,6 +141,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar.png" width="16" height="16"/>
+        <image name="calendars.png" width="31" height="31"/>
     </resources>
 </document>

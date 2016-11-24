@@ -184,7 +184,7 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="FKQ-jm-W04">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="calendar.png" id="qDH-4d-fWj">
+                        <barButtonItem key="leftBarButtonItem" image="calendars.png" id="qDH-4d-fWj">
                             <connections>
                                 <action selector="showCalendars:" destination="Tke-4i-btP" id="aDL-tY-wme"/>
                             </connections>
@@ -238,7 +238,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar.png" width="16" height="16"/>
+        <image name="calendars.png" width="31" height="31"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
