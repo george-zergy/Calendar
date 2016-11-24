@@ -96,12 +96,6 @@ typedef enum : NSUInteger
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
 {
     UINavigationController *nc = (UINavigationController*)[segue destinationViewController];
@@ -130,6 +124,39 @@ typedef enum : NSUInteger
         UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissSettings:)];
         nc.topViewController.navigationItem.rightBarButtonItem = hide ? nil : doneButton;
     }
+}
+
+- (void)showPopoverForNewEvent:(EKEvent*)ev
+{
+    EKEventEditViewController *eventController = [EKEventEditViewController new];
+    eventController.event = ev;
+    eventController.eventStore = self.eventStore;
+    eventController.editViewDelegate = self; // called only when event is deleted
+    eventController.modalInPopover = YES;
+    eventController.modalPresentationStyle = UIModalPresentationPopover;
+    eventController.presentationController.delegate = self;
+    
+    [self showDetailViewController:eventController sender:self];
+    
+    UIPopoverPresentationController *popController = eventController.popoverPresentationController;
+    popController.permittedArrowDirections = UIPopoverArrowDirectionLeft|UIPopoverArrowDirectionRight;
+    popController.delegate = self;
+    popController.barButtonItem = self.navigationItem.rightBarButtonItem;
+}
+
+- (IBAction)newEvent {
+    NSDate *date = [NSDate date];
+    
+    EKEvent *ev = [EKEvent eventWithEventStore:self.eventStore];
+    ev.startDate = date;
+    
+    NSDateComponents *comps = [NSDateComponents new];
+    comps.hour = 1;
+    
+    ev.endDate = [self.calendar dateByAddingComponents:comps toDate:date options:0];
+    ev.allDay = NO;
+    
+    [self showPopoverForNewEvent:ev];
 }
 
 #pragma mark - Private
@@ -315,6 +342,43 @@ typedef enum : NSUInteger
 - (void)calendarChooserDidFinish:(EKCalendarChooser*)calendarChooser
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - EKEventEditViewDelegate
+
+- (void)eventEditViewController:(EKEventEditViewController *)controller didCompleteWithAction:(EKEventEditViewAction)action
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+
+#pragma mark - UIPopoverPresentationControllerDelegate
+
+- (void)popoverPresentationController:(UIPopoverPresentationController *)popoverPresentationController willRepositionPopoverToRect:(inout CGRect *)rect inView:(inout UIView *__autoreleasing  _Nonnull *)view
+{
+//    CGRect cellRect;
+//    if (self.createdEventDate) {
+//        cellRect = [self.dayPlannerView rectForNewEventOfType:self.createdEventType atDate:self.createdEventDate];
+//    }
+//    else {
+//        UIView *cell = self.dayPlannerView.selectedEventView;
+//        cellRect = [self.dayPlannerView convertRect:cell.bounds fromView:cell];
+//    }
+//    CGRect visibleRect = CGRectIntersection(self.dayPlannerView.bounds, cellRect);
+//    if (CGRectIsNull(visibleRect)) {
+//        rect->origin.x = cellRect.origin.x;
+//        rect->origin.y = fminf(cellRect.origin.y, CGRectGetMaxY(self.dayPlannerView.bounds));
+//        rect->size.width = cellRect.size.width;
+//    }
+//    else {
+//        *rect = visibleRect;
+//    }
+}
+
+- (void)popoverPresentationControllerDidDismissPopover:(UIPopoverPresentationController *)popoverPresentationController
+{
+    
 }
 
 

@@ -50,4 +50,6 @@ typedef  UIViewController<CalendarViewControllerNavigation> CalendarViewControll
 @property (nonatomic) NSCalendar *calendar;
 @property (nonatomic) EKEventStore *eventStore;
 
+- (IBAction)newEvent;
+
 @end

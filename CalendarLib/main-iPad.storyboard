@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="DbJ-31-h6o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Bwz-uX-NMg">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Main View Controller-->
         <scene sceneID="kxW-zC-am1">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DbJ-31-h6o" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="DbJ-31-h6o" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ahH-uo-DwM"/>
                         <viewControllerLayoutGuide type="bottom" id="Yq7-Y3-QaW"/>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCc-d4-pwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="-1572"/>
+            <point key="canvasLocation" x="-525" y="-1571"/>
         </scene>
         <!--dayPlannerSettings-->
         <scene sceneID="7f4-C0-b4b">
@@ -122,7 +122,124 @@
             </objects>
             <point key="canvasLocation" x="-140" y="-880"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="F1J-NL-Sly">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tke-4i-btP" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rXe-3C-5a6"/>
+                        <viewControllerLayoutGuide type="bottom" id="F0E-Ft-ho4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zs7-AZ-qaE">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-js-GGv">
+                                <rect key="frame" x="0.0" y="104" width="768" height="920"/>
+                                <color key="backgroundColor" red="0.94793570039999997" green="0.94793570039999997" blue="0.94793570039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at8-P6-EnJ">
+                                <rect key="frame" x="0.0" y="64" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Us9-eX-tjb"/>
+                                    <constraint firstAttribute="height" constant="40" id="abE-Wh-FlL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                <state key="normal" title="Today"/>
+                                <connections>
+                                    <action selector="showToday:" destination="Tke-4i-btP" eventType="touchUpInside" id="ND5-Uo-yC2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTC-ap-PbW">
+                                <rect key="frame" x="60" y="64" width="648" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Av9-dW-RgP">
+                                <rect key="frame" x="0.0" y="104" width="768" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="v80-g6-Bz3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94782161710000001" green="0.94782161710000001" blue="0.94782161710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QTC-ap-PbW" firstAttribute="leading" secondItem="at8-P6-EnJ" secondAttribute="trailing" id="7VN-nL-70z"/>
+                            <constraint firstItem="4eN-js-GGv" firstAttribute="top" secondItem="rXe-3C-5a6" secondAttribute="bottom" constant="40" id="AWf-TN-Iq5"/>
+                            <constraint firstAttribute="trailing" secondItem="Av9-dW-RgP" secondAttribute="trailing" id="DGI-Qc-uTR"/>
+                            <constraint firstItem="F0E-Ft-ho4" firstAttribute="top" secondItem="4eN-js-GGv" secondAttribute="bottom" id="GcZ-ue-Jzt"/>
+                            <constraint firstAttribute="trailing" secondItem="QTC-ap-PbW" secondAttribute="trailing" constant="60" id="IAH-Gf-LSv"/>
+                            <constraint firstItem="at8-P6-EnJ" firstAttribute="leading" secondItem="zs7-AZ-qaE" secondAttribute="leading" id="Q12-p0-6oq"/>
+                            <constraint firstAttribute="trailing" secondItem="4eN-js-GGv" secondAttribute="trailing" id="WAV-9u-AAn"/>
+                            <constraint firstItem="at8-P6-EnJ" firstAttribute="top" secondItem="rXe-3C-5a6" secondAttribute="bottom" id="a3o-Ta-5WW"/>
+                            <constraint firstItem="4eN-js-GGv" firstAttribute="leading" secondItem="zs7-AZ-qaE" secondAttribute="leading" id="bOY-PJ-VkL"/>
+                            <constraint firstItem="QTC-ap-PbW" firstAttribute="top" secondItem="rXe-3C-5a6" secondAttribute="bottom" id="jVq-29-67I"/>
+                            <constraint firstItem="4eN-js-GGv" firstAttribute="top" secondItem="QTC-ap-PbW" secondAttribute="bottom" id="jby-Kl-ExQ"/>
+                            <constraint firstItem="Av9-dW-RgP" firstAttribute="leading" secondItem="zs7-AZ-qaE" secondAttribute="leading" id="mWC-Ji-bCf"/>
+                            <constraint firstItem="Av9-dW-RgP" firstAttribute="top" secondItem="QTC-ap-PbW" secondAttribute="bottom" id="y7r-FW-l6n"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="FKQ-jm-W04">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="calendar.png" id="qDH-4d-fWj">
+                            <connections>
+                                <action selector="showCalendars:" destination="Tke-4i-btP" id="aDL-tY-wme"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="Jvf-SO-jRm">
+                            <rect key="frame" x="254" y="7" width="260" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Day"/>
+                                <segment title="Week"/>
+                                <segment title="Month"/>
+                                <segment title="Year"/>
+                            </segments>
+                            <connections>
+                                <action selector="switchControllers:" destination="Tke-4i-btP" eventType="valueChanged" id="gtf-Xs-i2u"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gAN-4m-qHf">
+                            <connections>
+                                <action selector="newEvent" destination="Tke-4i-btP" id="P13-Bf-hxr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="4eN-js-GGv" id="4VP-9d-kdj"/>
+                        <outlet property="currentDateLabel" destination="QTC-ap-PbW" id="ohb-DL-Spm"/>
+                        <outlet property="viewChooser" destination="Jvf-SO-jRm" id="9Eb-zE-qoU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYy-6S-XWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1545" y="-1571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="271-mM-mXS">
+            <objects>
+                <navigationController storyboardIdentifier="MainNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bwz-uX-NMg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8cI-36-Zig">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tke-4i-btP" kind="relationship" relationship="rootViewController" id="iGM-fL-c3Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ni6-Ku-L9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="544" y="-1571"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="calendar.png" width="16" height="16"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

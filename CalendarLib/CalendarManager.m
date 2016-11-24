@@ -21,7 +21,7 @@
 
 - (void)openCalendarVC:(UIViewController *)vc {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        UIViewController *viewController = [[UIStoryboard storyboardWithName:@"main-iPad" bundle:NULL] instantiateViewControllerWithIdentifier:@"MainViewController"];
+        UIViewController *viewController = [[UIStoryboard storyboardWithName:@"main-iPad" bundle:NULL] instantiateViewControllerWithIdentifier:@"MainNav"];
         viewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
         
         [vc presentViewController:viewController animated:YES completion:nil];
