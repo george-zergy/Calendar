@@ -93,6 +93,15 @@ typedef enum : NSUInteger
         NSDate *date = [self.calendar mgc_startOfWeekForDate:[NSDate date]];
         [self.calendarViewController moveToDate:date animated:NO];
         self.firstTimeAppears = NO;
+    
+        if ([self.eventStore calendarsForEntityType:EKEntityTypeEvent].count == 0) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"To use calendars with Zero app you need to add at least one calendar . Please go to your iPhone Settings -> Calendar and add at least one account" preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+            }]];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
     }
 }
 

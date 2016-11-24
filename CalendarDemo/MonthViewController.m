@@ -59,6 +59,7 @@
         UIFont *boldFont = [UIFont boldSystemFontOfSize:isiPad ? 15 : 12];
         
         MGCCircleMark *mark = [MGCCircleMark new];
+        mark.color = UIColorFromRGB(0x007db1);
         mark.yOffset = boldFont.descender - mark.margin;
        
        [attrStr addAttributes:@{ NSFontAttributeName: boldFont, NSForegroundColorAttributeName: [UIColor whiteColor], MGCCircleMarkAttributeName: mark} range:[str rangeOfString:dayStr]];

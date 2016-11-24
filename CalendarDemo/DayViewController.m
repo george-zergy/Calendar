@@ -12,6 +12,7 @@
 #import "Constant.h"
 #import "MGCCalendarHeaderView.h"
 
+
 @implementation DayViewController
 
 @dynamic delegate;
@@ -25,8 +26,6 @@
     self.dayPlannerView.backgroundColor = [UIColor clearColor];
     self.dayPlannerView.backgroundView = [UIView new];
     self.dayPlannerView.backgroundView.backgroundColor = [UIColor whiteColor];
-    
-    
 }
 
 - (void)viewDidLayoutSubviews {
@@ -34,13 +33,15 @@
     if (isiPad) {
         //NSLog(@"---------------- iPAD ------------------");
         self.dayPlannerView.dateFormat = @"eee\nd MMM";
-        self.dayPlannerView.dayHeaderHeight = 60;
+        self.dayPlannerView.dayHeaderHeight = 50;
     }
     else{
         //NSLog(@"---------------- iPhone ------------------");
         self.dayPlannerView.dateFormat = @"eee\nd MMM";
         self.dayPlannerView.dayHeaderHeight = 60;
     }
+    
+    self.dayPlannerView.currentTimeColor = UIColorFromRGB(0x007db1);
 }
 
 #pragma mark - MGCDayPlannerViewController
@@ -67,7 +68,6 @@
 
 - (NSAttributedString*)dayPlannerView:(MGCDayPlannerView *)view attributedStringForDayHeaderAtDate:(NSDate *)date
 {
-    
     static NSDateFormatter *dateFormatter = nil;
     if (dateFormatter == nil) {
         dateFormatter = [NSDateFormatter new];
@@ -83,6 +83,7 @@
         UIFont *boldFont = [UIFont boldSystemFontOfSize:15];
         
         MGCCircleMark *mark = [MGCCircleMark new];
+        mark.color = UIColorFromRGB(0x007db1);
         mark.yOffset = boldFont.descender - mark.margin;
         
         NSUInteger dayStringStart = [dayStr rangeOfString:@" "].location + 1;

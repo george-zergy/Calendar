@@ -25,6 +25,9 @@
     self.dayPlannerView.backgroundColor = [UIColor clearColor];
     self.dayPlannerView.backgroundView = [UIView new];
     self.dayPlannerView.backgroundView.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)viewDidLayoutSubviews {
     
     if (isiPad) {
         //NSLog(@"---------------- iPAD ------------------");
@@ -33,10 +36,13 @@
     }
     else{
         //NSLog(@"---------------- iPhone ------------------");
-        self.dayPlannerView.dateFormat = @"eee\nd \nMMM";
+        self.dayPlannerView.dateFormat = @"eee\nd MMM";
         self.dayPlannerView.dayHeaderHeight = 60;
     }
+    
+    self.dayPlannerView.currentTimeColor = UIColorFromRGB(0x007db1);
 }
+
 
 #pragma mark - MGCDayPlannerViewController
 
@@ -103,6 +109,7 @@
         UIFont *boldFont = [UIFont boldSystemFontOfSize:15];
         
         MGCCircleMark *mark = [MGCCircleMark new];
+        mark.color = UIColorFromRGB(0x007db1);
         mark.yOffset = boldFont.descender - mark.margin;
  
         NSUInteger dayStringStart = [dayStr rangeOfString:@" "].location + 1;
