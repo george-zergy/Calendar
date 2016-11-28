@@ -180,6 +180,7 @@ typedef enum : NSUInteger
         _dayViewController = [[DayViewController alloc]initWithEventStore:self.eventStore];
         _dayViewController.calendar = self.calendar;
         _dayViewController.showsWeekHeaderView = YES;
+        
         _dayViewController.delegate = self;
     }
     return _dayViewController;

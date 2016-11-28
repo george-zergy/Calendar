@@ -40,7 +40,7 @@
         self.dayPlannerView.dayHeaderHeight = 60;
     }
     
-    self.dayPlannerView.currentTimeColor = UIColorFromRGB(0x007db1);
+    self.dayPlannerView.currentTimeColor = [[[UIApplication sharedApplication] delegate] window].tintColor;
 }
 
 
@@ -107,7 +107,7 @@
         UIFont *boldFont = [UIFont boldSystemFontOfSize:15];
         
         MGCCircleMark *mark = [MGCCircleMark new];
-        mark.color = UIColorFromRGB(0x007db1);
+        mark.color = [[[UIApplication sharedApplication] delegate] window].tintColor;
         mark.yOffset = boldFont.descender - mark.margin;
  
         NSUInteger dayStringStart = [dayStr rangeOfString:@" "].location + 1;

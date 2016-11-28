@@ -470,7 +470,7 @@ static const CGFloat kDefaultYearHeaderFontSizeiPhone = 20;	// deafult font size
     {
         NSUInteger i = [self.calendar components:NSCalendarUnitDay fromDate:date toDate:[NSDate date] options:0].day + 1;
         cell.calendarView.highlightedDays = [NSIndexSet indexSetWithIndex:i];
-        cell.calendarView.highlightColor = UIColorFromRGB(0x007db1);
+        cell.calendarView.highlightColor = [[[UIApplication sharedApplication] delegate] window].tintColor;
     }
     
     [cell.calendarView setNeedsDisplay];

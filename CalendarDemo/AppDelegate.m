@@ -21,7 +21,8 @@
 {
     //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.tintColor = [self colorFromHexString:@"#007db1"];
+    self.window.tintColor = [self colorFromHexString:@"#007aff"];
+    self.window.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
 //	self.window.tintColor = [UIColor redColor];
     //[self.window makeKeyAndVisible];
 	
