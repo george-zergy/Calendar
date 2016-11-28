@@ -40,6 +40,8 @@
 	</array>
 	<key>UIRequiresFullScreen</key>
 	<true/>
+	<key>NSContactsUsageDescription</key>
+	<string>Test</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

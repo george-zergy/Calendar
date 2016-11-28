@@ -99,6 +99,10 @@ typedef enum : NSUInteger
             [alertController addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 
             }]];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Go to setting" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                [[UIApplication sharedApplication] openURL:url];
+            }]];
             
             [self presentViewController:alertController animated:YES completion:nil];
         }
