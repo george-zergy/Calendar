@@ -169,7 +169,7 @@
         //NSLog(@"---------------- iPhone ------------------");
         font  = [UIFont fontWithName:@"HelveticaNeue" size:10];
     }
-    NSMutableAttributedString* str = [[NSMutableAttributedString alloc]initWithString:month attributes:@{ NSFontAttributeName:font, NSForegroundColorAttributeName:[UIColor blueColor], NSParagraphStyleAttributeName: para }];
+    NSMutableAttributedString* str = [[NSMutableAttributedString alloc]initWithString:month attributes:@{ NSFontAttributeName:font, NSForegroundColorAttributeName:UIColorFromRGB(0x007db1), NSParagraphStyleAttributeName: para }];
     return str;
 }
 

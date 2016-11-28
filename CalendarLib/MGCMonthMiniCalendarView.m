@@ -284,16 +284,21 @@ static const CGFloat kDefaultHeaderFontSizeiPhone = 8;
 			[bkgColor setFill];
 			UIRectFill(boxRect);
 		}
+        
+        NSMutableAttributedString *as = [self textForDayAtIndex:i cellColor:bkgColor];
 		
 		if ([self.highlightedDays containsIndex:i])
 		{
-			UIBezierPath* p = [UIBezierPath bezierPathWithOvalInRect:boxRect];
+			UIBezierPath* p = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(boxRect.origin.x, boxRect.origin.y, boxRect.size.width + 1, boxRect.size.height + 1)];
 			[self.highlightColor setFill];
 			[p fill];
+            
+            [as drawInRect:CGRectMake(cellRect.origin.x, cellRect.origin.y, cellRect.size.width + 1, cellRect.size.height + 1)];
 		}
+        else {
+            [as drawInRect:cellRect];
+        }
 		
-		NSMutableAttributedString *as = [self textForDayAtIndex:i cellColor:bkgColor];
-		[as drawInRect:cellRect];
 		
 		x += cellRect.size.width + space;
 	}

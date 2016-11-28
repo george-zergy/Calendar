@@ -48,8 +48,7 @@
 
 - (BOOL)dayPlannerView:(MGCDayPlannerView*)view canCreateNewEventOfType:(MGCEventType)type atDate:(NSDate*)date
 {
-	NSDateComponents *comps = [self.calendar components:NSCalendarUnitWeekday fromDate:date];
-	return comps.weekday != 1;
+	return YES;
 }
 
 - (void)dayPlannerView:(MGCDayPlannerView*)view didScroll:(MGCDayPlannerScrollType)scrollType
@@ -62,8 +61,7 @@
 
 - (BOOL)dayPlannerView:(MGCDayPlannerView*)view canMoveEventOfType:(MGCEventType)type atIndex:(NSUInteger)index date:(NSDate*)date toType:(MGCEventType)targetType date:(NSDate*)targetDate
 {
-	NSDateComponents *comps = [self.calendar components:NSCalendarUnitWeekday fromDate:targetDate];
-	return (comps.weekday != 1 && comps.weekday != 7);
+    return YES;
 }
 
 /*
