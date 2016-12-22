@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: .
 
 SPEC CHECKSUMS:
-  CalendarLib: 5e2f86932d8ab6b8759d98a3f9418fd6c01e4c7b
+  CalendarLib: 979c08b2b2b44e6441c78dad237de277c15aeb58
   OrderedDictionary: 9cc5d69c5c5314ad696ed1839190724e83d534c7
   OSCache: 826996b68e8542a8a3d8af1ab0a0fc3070d8f357
 

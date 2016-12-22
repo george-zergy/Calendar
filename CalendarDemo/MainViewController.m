@@ -305,6 +305,11 @@ typedef enum : NSUInteger
     self.calendarChooser.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(calendarChooserStartEdit)];
 }
 
+- (void)switchToDayWithDate:(NSDate *)date {
+    self.viewChooser.selectedSegmentIndex = 0;
+    [self moveToNewController:self.dayViewController atDate:date];
+}
+
 #pragma mark - YearViewControllerDelegate
 
 - (void)yearViewController:(YearViewController*)controller didSelectMonthAtDate:(NSDate*)date

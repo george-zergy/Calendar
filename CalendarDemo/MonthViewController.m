@@ -116,4 +116,9 @@
 	[self moveToDate:date animated:animated];
 }
 
+- (void)monthPlannerView:(MGCMonthPlannerView*)view didSelectDayCellAtDate:(NSDate *)date
+{
+    [self.delegate switchToDayWithDate:date];
+}
+
 @end

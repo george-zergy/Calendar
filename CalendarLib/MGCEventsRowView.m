@@ -29,7 +29,7 @@
 //
 #import "MGCEventsRowView.h"
 
-static const CGFloat kCellSpacing = 2.;		// space around cells
+static const CGFloat kCellSpacing = 1.;		// space around cells
 
 
 @interface MGCEventsRowView ()

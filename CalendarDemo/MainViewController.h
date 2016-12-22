@@ -33,6 +33,7 @@ typedef  UIViewController<CalendarViewControllerNavigation> CalendarViewControll
 
 - (void)calendarViewController:(CalendarViewController*)controller didShowDate:(NSDate*)date;
 - (void)calendarViewController:(CalendarViewController*)controller didSelectEvent:(EKEvent*)event;
+- (void)switchToDayWithDate:(NSDate *)date;
 
 @end
 

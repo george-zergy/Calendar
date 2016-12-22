@@ -529,7 +529,7 @@
 				ORGANIZATIONNAME = "Julien Martin";
 				TargetAttributes = {
 					72B5D8ED180D73E0004ADB86 = {
-						DevelopmentTeam = RSMX8QUE69;
+						DevelopmentTeam = PRY2E4N994;
 					};
 				};
 			};
@@ -785,6 +785,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PRY2E4N994;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CalendarDemo/Calendar-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CalendarDemo/Calendar-Info.plist";
@@ -805,6 +806,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PRY2E4N994;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CalendarDemo/Calendar-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/CalendarDemo/Calendar-Info.plist";

@@ -110,7 +110,7 @@ typedef enum
     _rowHeight = isiPad ? 140. : 60.;
     _dayCellHeaderHeight = 30;
     _headerHeight =  35;
-    _itemHeight = 16;
+    _itemHeight = 14;
     _reuseQueue = [MGCReusableObjectQueue new];
     _eventRows = [MutableOrderedDictionary dictionaryWithCapacity:kRowCacheSize];
     _dragEventIndex = -1;
