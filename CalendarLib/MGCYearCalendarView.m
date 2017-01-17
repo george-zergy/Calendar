@@ -33,7 +33,7 @@
 #import "MGCMonthMiniCalendarView.h"
 #import "MGCYearCalendarMonthHeaderView.h"
 #import "NSCalendar+MGCAdditions.h"
-#import "Constant.h"
+#import "IZConfigFile.h"
 
 
 // reuse identifiers for collection view cells and supplementary views

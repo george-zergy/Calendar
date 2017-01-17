@@ -8,7 +8,7 @@
 #import "MonthViewController.h"
 #import "NSCalendar+MGCAdditions.h"
 #import "NSAttributedString+MGCAdditions.h"
-#import "Constant.h"
+#import "IZConfigFile.h"
 
 
 @implementation MonthViewController

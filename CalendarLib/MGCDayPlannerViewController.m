@@ -31,7 +31,7 @@
 #import "MGCDayPlannerViewController.h"
 #import "MGCDateRange.h"
 #import "MGCCalendarHeaderView.h"
-#import "Constant.h"
+#import "IZConfigFile.h"
 
 @interface MGCDayPlannerViewController ()
 

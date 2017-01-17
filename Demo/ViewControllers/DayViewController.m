@@ -9,7 +9,7 @@
 #import "MGCDateRange.h"
 #import "NSCalendar+MGCAdditions.h"
 #import "NSAttributedString+MGCAdditions.h"
-#import "Constant.h"
+#import "IZConfigFile.h"
 #import "MGCCalendarHeaderView.h"
 
 

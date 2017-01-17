@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0673E2F6E569D7BAA7103564 /* Pods_CalendarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2B0B3F1105CFD17AA9670A /* Pods_CalendarDemo.framework */; };
-		5E60EC631E2E845000D8548B /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E60EC621E2E845000D8548B /* Constant.m */; };
+		5E60EC661E2E861300D8548B /* IZConfigFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E60EC651E2E861300D8548B /* IZConfigFile.m */; };
 		5E6771611E2E5D7E00FA2475 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6771401E2E5D7E00FA2475 /* Images.xcassets */; };
 		5E6771621E2E5D7E00FA2475 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6771431E2E5D7E00FA2475 /* AppDelegate.m */; };
 		5E6771631E2E5D7E00FA2475 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6771451E2E5D7E00FA2475 /* DemoViewController.m */; };
@@ -55,9 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		072E5EFE1C338559007711A0 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		28486480EAA57CF147A3825F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E60EC621E2E845000D8548B /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		5E60EC641E2E861300D8548B /* IZConfigFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IZConfigFile.h; sourceTree = "<group>"; };
+		5E60EC651E2E861300D8548B /* IZConfigFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IZConfigFile.m; sourceTree = "<group>"; };
 		5E6771401E2E5D7E00FA2475 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E6771421E2E5D7E00FA2475 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E6771431E2E5D7E00FA2475 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -453,8 +453,8 @@
 		72CD8BAA18228A7500F12339 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				072E5EFE1C338559007711A0 /* Constant.h */,
-				5E60EC621E2E845000D8548B /* Constant.m */,
+				5E60EC641E2E861300D8548B /* IZConfigFile.h */,
+				5E60EC651E2E861300D8548B /* IZConfigFile.m */,
 				721CA1B21A9382990083F41A /* Localizable.strings */,
 				72E8D25718FC474500024582 /* MGCReusableObjectQueue.h */,
 				72E8D25818FC474500024582 /* MGCReusableObjectQueue.m */,
@@ -647,13 +647,13 @@
 				5E6771711E2E5D7E00FA2475 /* YearViewController.m in Sources */,
 				5E6771621E2E5D7E00FA2475 /* AppDelegate.m in Sources */,
 				5E67716C1E2E5D7E00FA2475 /* MainViewController.m in Sources */,
-				5E60EC631E2E845000D8548B /* Constant.m in Sources */,
 				5E6771641E2E5D7E00FA2475 /* main.m in Sources */,
 				5E6771701E2E5D7E00FA2475 /* WeekViewController.m in Sources */,
 				5E67716F1E2E5D7E00FA2475 /* WeekSettingsViewController.m in Sources */,
 				5E6771631E2E5D7E00FA2475 /* DemoViewController.m in Sources */,
 				5E67716E1E2E5D7E00FA2475 /* MonthViewController.m in Sources */,
 				5E67716D1E2E5D7E00FA2475 /* MonthSettingsViewController.m in Sources */,
+				5E60EC661E2E861300D8548B /* IZConfigFile.m in Sources */,
 				5E67716A1E2E5D7E00FA2475 /* DayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

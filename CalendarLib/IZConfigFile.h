@@ -1,12 +1,12 @@
+//
+//  IZConfigFile.h
+//  Calendar
+//
+//  Created by Zero Yerevan on 1/17/17.
+//  Copyright © 2017 Julien Martin. All rights reserved.
+//
 
-
-#ifndef CalendarDemo_Constant_h
-#define CalendarDemo_Constant_h
-
-//=========================================================================================
-/* CREATE ALL CONSTANT FOR APP */
-//=========================================================================================
-
+#import <Foundation/Foundation.h>
 
 #define APP_NAME  @"CalendarDemo"
 
@@ -59,5 +59,6 @@
 
 #define kHeaderHeight 100
 
+@interface IZConfigFile : NSObject
 
-#endif
+@end
