@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FCEB3591DE3054C00B76A8F /* main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCEB3561DE3054C00B76A8F /* main-iPad.storyboard */; };
-		4FCEB35A1DE3054C00B76A8F /* main-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCEB3571DE3054C00B76A8F /* main-iPhone.storyboard */; };
-		4FCEB35B1DE3054C00B76A8F /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCEB3581DE3054C00B76A8F /* settings.storyboard */; };
-		5E154A6D1DE6D10300FEBB7D /* calendars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E154A6C1DE6D10300FEBB7D /* calendars@2x.png */; };
 		5E6771611E2E5D7E00FA2475 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6771401E2E5D7E00FA2475 /* Images.xcassets */; };
 		5E6771621E2E5D7E00FA2475 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6771431E2E5D7E00FA2475 /* AppDelegate.m */; };
 		5E6771631E2E5D7E00FA2475 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6771451E2E5D7E00FA2475 /* DemoViewController.m */; };
@@ -27,6 +23,10 @@
 		5E67716F1E2E5D7E00FA2475 /* WeekSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67715C1E2E5D7E00FA2475 /* WeekSettingsViewController.m */; };
 		5E6771701E2E5D7E00FA2475 /* WeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67715E1E2E5D7E00FA2475 /* WeekViewController.m */; };
 		5E6771711E2E5D7E00FA2475 /* YearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6771601E2E5D7E00FA2475 /* YearViewController.m */; };
+		5E6771751E2E6B0800FA2475 /* main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E6771721E2E6B0800FA2475 /* main-iPad.storyboard */; };
+		5E6771761E2E6B0800FA2475 /* main-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E6771731E2E6B0800FA2475 /* main-iPhone.storyboard */; };
+		5E6771771E2E6B0800FA2475 /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E6771741E2E6B0800FA2475 /* settings.storyboard */; };
+		5E6771791E2E6B1200FA2475 /* calendars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6771781E2E6B1200FA2475 /* calendars@2x.png */; };
 		721CA1B41A9382990083F41A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 721CA1B21A9382990083F41A /* Localizable.strings */; };
 		72B5D8F2180D73E0004ADB86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B5D8F1180D73E0004ADB86 /* Foundation.framework */; };
 		72B5D8F4180D73E0004ADB86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B5D8F3180D73E0004ADB86 /* CoreGraphics.framework */; };
@@ -56,10 +56,6 @@
 		072E5EFE1C338559007711A0 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		1F0C1F1B722A7E607C88C0FE /* Pods-CalendarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarDemo/Pods-CalendarDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		28486480EAA57CF147A3825F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FCEB3561DE3054C00B76A8F /* main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main-iPad.storyboard"; sourceTree = "<group>"; };
-		4FCEB3571DE3054C00B76A8F /* main-iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main-iPhone.storyboard"; sourceTree = "<group>"; };
-		4FCEB3581DE3054C00B76A8F /* settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settings.storyboard; sourceTree = "<group>"; };
-		5E154A6C1DE6D10300FEBB7D /* calendars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendars@2x.png"; sourceTree = "<group>"; };
 		5E6771401E2E5D7E00FA2475 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E6771421E2E5D7E00FA2475 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E6771431E2E5D7E00FA2475 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +83,10 @@
 		5E67715E1E2E5D7E00FA2475 /* WeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekViewController.m; sourceTree = "<group>"; };
 		5E67715F1E2E5D7E00FA2475 /* YearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearViewController.h; sourceTree = "<group>"; };
 		5E6771601E2E5D7E00FA2475 /* YearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearViewController.m; sourceTree = "<group>"; };
+		5E6771721E2E6B0800FA2475 /* main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main-iPad.storyboard"; sourceTree = "<group>"; };
+		5E6771731E2E6B0800FA2475 /* main-iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main-iPhone.storyboard"; sourceTree = "<group>"; };
+		5E6771741E2E6B0800FA2475 /* settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settings.storyboard; sourceTree = "<group>"; };
+		5E6771781E2E6B1200FA2475 /* calendars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendars@2x.png"; sourceTree = "<group>"; };
 		720DAE511C6269D900DF8AAA /* NSAttributedString+MGCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+MGCAdditions.h"; sourceTree = "<group>"; };
 		720DAE521C6269D900DF8AAA /* NSAttributedString+MGCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+MGCAdditions.m"; sourceTree = "<group>"; };
 		720DAE541C66531300DF8AAA /* MGCEventKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCEventKitSupport.m; sourceTree = "<group>"; };
@@ -203,25 +203,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		072E5EFD1C338534007711A0 /* Header&Constants */ = {
-			isa = PBXGroup;
-			children = (
-				072E5EFE1C338559007711A0 /* Constant.h */,
-			);
-			name = "Header&Constants";
-			sourceTree = "<group>";
-		};
-		4F900B9C1DE2F7590003B4ED /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				4FCEB3561DE3054C00B76A8F /* main-iPad.storyboard */,
-				4FCEB3571DE3054C00B76A8F /* main-iPhone.storyboard */,
-				4FCEB3581DE3054C00B76A8F /* settings.storyboard */,
-				5E154A6C1DE6D10300FEBB7D /* calendars@2x.png */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
 		5E67713F1E2E5D7E00FA2475 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +230,9 @@
 		5E6771471E2E5D7E00FA2475 /* Soryboards */ = {
 			isa = PBXGroup;
 			children = (
+				5E6771721E2E6B0800FA2475 /* main-iPad.storyboard */,
+				5E6771731E2E6B0800FA2475 /* main-iPhone.storyboard */,
+				5E6771741E2E6B0800FA2475 /* settings.storyboard */,
 				5E6771481E2E5D7E00FA2475 /* Launch Screen.storyboard */,
 				5E6771491E2E5D7E00FA2475 /* MainStoryboard.storyboard */,
 			);
@@ -258,6 +242,7 @@
 		5E67714A1E2E5D7E00FA2475 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5E6771781E2E6B1200FA2475 /* calendars@2x.png */,
 				5E67714B1E2E5D7E00FA2475 /* Calendar-Info.plist */,
 				5E67714C1E2E5D7E00FA2475 /* Calendar-Prefix.pch */,
 				5E67714D1E2E5D7E00FA2475 /* InfoPlist.strings */,
@@ -465,8 +450,7 @@
 		72CD8BAA18228A7500F12339 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				4F900B9C1DE2F7590003B4ED /* UI */,
-				072E5EFD1C338534007711A0 /* Header&Constants */,
+				072E5EFE1C338559007711A0 /* Constant.h */,
 				721CA1B21A9382990083F41A /* Localizable.strings */,
 				72E8D25718FC474500024582 /* MGCReusableObjectQueue.h */,
 				72E8D25818FC474500024582 /* MGCReusableObjectQueue.m */,
@@ -577,18 +561,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FCEB3591DE3054C00B76A8F /* main-iPad.storyboard in Resources */,
-				4FCEB35A1DE3054C00B76A8F /* main-iPhone.storyboard in Resources */,
 				5E6771651E2E5D7E00FA2475 /* Launch Screen.storyboard in Resources */,
 				5E6771611E2E5D7E00FA2475 /* Images.xcassets in Resources */,
+				5E6771751E2E6B0800FA2475 /* main-iPad.storyboard in Resources */,
+				5E6771771E2E6B0800FA2475 /* settings.storyboard in Resources */,
 				5E6771691E2E5D7E00FA2475 /* Settings.bundle in Resources */,
-				5E154A6D1DE6D10300FEBB7D /* calendars@2x.png in Resources */,
+				5E6771761E2E6B0800FA2475 /* main-iPhone.storyboard in Resources */,
+				5E6771791E2E6B1200FA2475 /* calendars@2x.png in Resources */,
 				BC32A4681D3101BB00AB19D7 /* MGCCalendarHeaderCell.xib in Resources */,
 				5E6771661E2E5D7E00FA2475 /* MainStoryboard.storyboard in Resources */,
 				721CA1B41A9382990083F41A /* Localizable.strings in Resources */,
 				5E6771671E2E5D7E00FA2475 /* Calendar-Info.plist in Resources */,
 				5E6771681E2E5D7E00FA2475 /* InfoPlist.strings in Resources */,
-				4FCEB35B1DE3054C00B76A8F /* settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
