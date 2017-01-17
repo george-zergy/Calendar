@@ -7,7 +7,6 @@
 //
 
 #import "DemoViewController.h"
-#import "CalendarManager.h"
 
 @interface DemoViewController ()
 
@@ -24,7 +23,23 @@
 }
 
 - (IBAction)openCalendar:(id)sender {
-    [[CalendarManager sharedInstance] openCalendarVC:self];
+    [self openCalendarVC:self];
 }
+
+
+- (void)openCalendarVC:(UIViewController *)vc {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        UIViewController *viewController = [[UIStoryboard storyboardWithName:@"main-iPad" bundle:NULL] instantiateViewControllerWithIdentifier:@"MainNav"];
+        viewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        
+        [vc presentViewController:viewController animated:YES completion:nil];
+    } else {
+        UIViewController *viewController = [[UIStoryboard storyboardWithName:@"main-iPhone" bundle:NULL] instantiateViewControllerWithIdentifier:@"MainNav"];
+        viewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        
+        [vc presentViewController:viewController animated:YES completion:nil];
+    }
+}
+
 
 @end

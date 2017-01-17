@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F900B9F1DE2F7B00003B4ED /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F900B9E1DE2F7B00003B4ED /* CalendarManager.m */; };
 		4F900BA11DE2FA520003B4ED /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F900BA01DE2FA520003B4ED /* MainStoryboard.storyboard */; };
 		4F900BA41DE2FAC20003B4ED /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F900BA31DE2FAC20003B4ED /* DemoViewController.m */; };
 		4FCEB3591DE3054C00B76A8F /* main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCEB3561DE3054C00B76A8F /* main-iPad.storyboard */; };
@@ -56,8 +55,6 @@
 		072E5EFE1C338559007711A0 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		1F0C1F1B722A7E607C88C0FE /* Pods-CalendarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarDemo/Pods-CalendarDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		28486480EAA57CF147A3825F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F900B9D1DE2F7B00003B4ED /* CalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
-		4F900B9E1DE2F7B00003B4ED /* CalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
 		4F900BA01DE2FA520003B4ED /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4F900BA21DE2FAC20003B4ED /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		4F900BA31DE2FAC20003B4ED /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
@@ -462,8 +459,6 @@
 				72B5D954180DB304004ADB86 /* Day planner */,
 				72936D7F185671DB00635BD9 /* Month planner */,
 				7248240A18D351F90067D0D7 /* Year calendar */,
-				4F900B9D1DE2F7B00003B4ED /* CalendarManager.h */,
-				4F900B9E1DE2F7B00003B4ED /* CalendarManager.m */,
 			);
 			name = Lib;
 			path = CalendarLib;
@@ -641,7 +636,6 @@
 				72EF08151A3DB8C6005699CA /* MonthViewController.m in Sources */,
 				72EF08181A3DB8C6005699CA /* YearViewController.m in Sources */,
 				72B5D902180D73E0004ADB86 /* AppDelegate.m in Sources */,
-				4F900B9F1DE2F7B00003B4ED /* CalendarManager.m in Sources */,
 				721DC18918219C4D00F9470C /* MainViewController.m in Sources */,
 				72B5D8FE180D73E0004ADB86 /* main.m in Sources */,
 				7258E8B11A5A98DD007F88AF /* WeekSettingsViewController.m in Sources */,
